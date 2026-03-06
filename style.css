@@ -1,1 +1,51 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
 
+/* Navbar Spread */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 5%; /* Forces logo to left edge, links to right */
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.nav-links a { color: #fff; text-decoration: none; margin-left: 25px; font-size: 0.9rem; }
+.active { color: #00ff88 !important; }
+
+/* Hero Spread */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #000 35%, rgba(0,0,0,0) 65%), 
+                url('https://images.unsplash.com/photo-1571731956622-39ed2704047a?auto=format&fit=crop&q=80&w=2000') no-repeat right center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%; /* Pushes text to the extreme left */
+}
+
+.left-align-text { max-width: 650px; }
+h1 { font-size: 4.5rem; line-height: 1; letter-spacing: -2px; margin: 20px 0; }
+.gap-statement p { color: #bbb; margin-bottom: 20px; font-size: 1.1rem; }
+
+/* The Pathway Arrow */
+.cta-pathway { display: flex; align-items: center; gap: 20px; margin-top: 30px; }
+.long-arrow { flex-grow: 1; max-width: 200px; height: 1px; background: #fff; position: relative; }
+.long-arrow::after { content: '>'; position: absolute; right: 0; top: -10px; font-size: 1.2rem; }
+.path-btn { border: 1px solid #fff; color: #fff; padding: 12px 20px; text-decoration: none; }
+
+/* SINGLE LINE COMMITMENTS */
+.commitments-row {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Spreads them in one line */
+    padding: 0 5%;
+}
+.commit-item { display: flex; align-items: center; gap: 10px; }
+.commit-text h3 { font-size: 0.95rem; }
+.commit-text p { font-size: 0.8rem; color: #888; }
+
+.footer-bar { position: absolute; bottom: 20px; width: 100%; text-align: center; font-size: 0.7rem; color: #444; }

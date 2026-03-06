@@ -105,10 +105,22 @@ by<!DOCTYPE html>
 
     <script>
         document.getElementById('intakeForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("Application Received. We will review your profile within 24 hours.");
-            window.location.href = 'index.html';
-        });
+    // Capture the data from the form
+    const clientData = {
+        name: document.getElementById('name').value,
+        goal: document.getElementById('goal').options[document.getElementById('goal').selectedIndex].text,
+        days: document.getElementById('days').value,
+        status: "Pending Review"
+    };
+
+    // Save to Local Storage (the "Backend" simulation)
+    localStorage.setItem('clientProfile', JSON.stringify(clientData));
+
+    // For now, we redirect to the dashboard instead of home
+    alert("Profile Created! Redirecting to your dashboard.");
+    window.location.href = 'dashboard.html';
+    e.preventDefault(); 
+});
     </script>
 </body>
 </html>
